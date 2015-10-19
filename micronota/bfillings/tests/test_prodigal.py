@@ -23,7 +23,8 @@ class ProdigalTests(TestCase):
     def setUp(self):
         self.temp_dir = tempfile.mkdtemp()
         self.get_prodigal_path = partial(get_data_path,
-                                         subfolder='data/prodigal')
+                                         subfolder=join('data',
+                                                        'prodigal'))
 
         self.positive_fps = list(map(self.get_prodigal_path, [
             # modified from NC_018498.gbk
